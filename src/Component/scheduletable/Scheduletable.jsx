@@ -125,7 +125,7 @@ const AllUsers = () => {
 
               <TableCell>
                 <Button color="primary" variant="contained" style={{ marginRight: 10 }} component={Link} to={`edit/${user._id}`}>EDIT</Button>
-                <Button sx={{ backgroundColor: "#B33A3A" }} color="secondary" variant="contained" onClick={() => deleteUserData('api/trip-schedule/' + user._id)} startIcon={<DeleteIcon />}>Delete</Button>
+                <Button sx={{ backgroundColor: "#B33A3A" }} color="secondary" variant="contained" onClick={() => deleteUserData('api/trip-schedule/' + user._id)} >Delete</Button>
               </TableCell>
             </TRow>
           ))}
