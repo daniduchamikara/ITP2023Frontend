@@ -102,7 +102,6 @@ const AllUsers = () => {
             <TableCell> Schedule Id</TableCell>
             <TableCell>Customer Name</TableCell>
             <TableCell>Vehicle Id</TableCell>
-            <TableCell>Driver</TableCell>
             <TableCell>Date</TableCell>
             <TableCell>Time</TableCell>
 
@@ -119,8 +118,7 @@ const AllUsers = () => {
               <TableCell>{i + 1}</TableCell>
               <TableCell>{user.name}</TableCell>
               <TableCell>{user.number}</TableCell>
-              <TableCell>{user.number}</TableCell>
-              <TableCell>{user.status === true ? "Available" : "Unavailable"}</TableCell>
+              <TableCell>{user.type}</TableCell>
               <TableCell>{user.driverName}</TableCell>
 
               <TableCell>
