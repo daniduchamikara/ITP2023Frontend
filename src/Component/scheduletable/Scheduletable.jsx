@@ -44,13 +44,14 @@ const AllUsers = () => {
     console.log(response.data);
   }
   const onsearch = (e) => {
+    console.log(e);
     setSearchingText(e.target.value);
     console.log(e.target.value);
     let filterData =
       users.filter(
         (item) =>
-          String(item.name.toUpperCase()).startsWith(e.target.value.toUpperCase()) ||
-          String(item.id).startsWith(e.target.value)
+          String(item.customerName.toUpperCase()).startsWith(e.target.value.toUpperCase()) ||
+          String(item.vehicleId).startsWith(e.target.value)
       ) || [];
     if (filterData.length > 0) {
       setSearchUsers(filterData);
@@ -101,8 +102,9 @@ const AllUsers = () => {
             <TableCell> Schedule Id</TableCell>
             <TableCell>Customer Name</TableCell>
             <TableCell>Vehicle Id</TableCell>
-            <TableCell>Date</TableCell>
-            <TableCell>Time</TableCell>
+            <TableCell>Date & Time</TableCell>
+            <TableCell>Driver Name</TableCell>
+            <TableCell>Location</TableCell>
 
 
             <TableCell></TableCell>
@@ -115,14 +117,15 @@ const AllUsers = () => {
           {searchUsers.map((user, i) => (
             <TRow key={user._id}>
               <TableCell>{i + 1}</TableCell>
-              <TableCell>{user.name}</TableCell>
-              <TableCell>{user.number}</TableCell>
-              <TableCell>{user.type}</TableCell>
+              <TableCell>{user.customerName}</TableCell>
+              <TableCell>{user.vehicleId}</TableCell>
+              <TableCell>{user.dateTime}</TableCell>
               <TableCell>{user.driverName}</TableCell>
+              <TableCell>{user.location}</TableCell>
 
               <TableCell>
                 <Button color="primary" variant="contained" style={{ marginRight: 10 }} component={Link} to={`edit/${user._id}`}>EDIT</Button>
-                <Button sx={{ backgroundColor: "#B33A3A" }} color="secondary" variant="contained" onClick={() => deleteUserData('api/trip-schedule/' + user._id)}>Delete</Button>
+                <Button sx={{ backgroundColor: "#B33A3A" }} color="secondary" variant="contained" onClick={() => deleteUserData('api/trip-schedule/' + user._id)} startIcon={<DeleteIcon />}>Delete</Button>
               </TableCell>
             </TRow>
           ))}

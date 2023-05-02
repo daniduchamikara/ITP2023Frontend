@@ -96,7 +96,6 @@ const rejectApi = async(id) => {
               color: '#000 !important',
               padding: '14px 20px',
               margin: '8px 0',
-              border: 'none',
               borderRadius: '4px',
               cursor: 'pointer',
               border: "1px soild red"

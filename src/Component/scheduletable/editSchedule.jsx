@@ -5,12 +5,12 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { getUsers, editUser } from '../../Service/api';
 
 const initialValue = {
-    "name": "",
-    "type": "",
-    "number": "",
-    "status": "",
-    "driver": "",
+    "customerName": "",
+    "vehicleId": "",
+    "dateTime": "",
     "driverName": "",
+    "location": "",
+    "driverId": "",
 }
 
 const Container = styled(FormGroup)`
@@ -23,12 +23,12 @@ const Container = styled(FormGroup)`
 const EditVehicle = () => {
     const [user, setUser] = useState(initialValue);
     const {
-        name,
-        type,
-        number,
-        status,
-        driver,
-        driverName} = user;
+        customerName,
+        vehicleId,
+        dateTime,
+        driverName,
+        location,
+        driverId} = user;
     const { id } = useParams();
     
     let navigate = useNavigate();
@@ -54,25 +54,29 @@ const EditVehicle = () => {
 
     return (
         <Container injectFirst>
-            <Typography variant="h4">Edit Information</Typography>
+            <Typography variant="h4">Edit Schedule</Typography>
             <FormControl>
                 <InputLabel htmlFor="my-input">Customer Name</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name='name' value={name} id="my-input" aria-describedby="my-helper-text" />
+                <Input onChange={(e) => onValueChange(e)} name='customerName' value={customerName} id="my-input" aria-describedby="my-helper-text" />
             </FormControl>
             <FormControl>
                 <InputLabel htmlFor="my-input">Vehicle Reg Plate Number</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name='type' value={number} id="my-input" aria-describedby="my-helper-text" />
+                <Input onChange={(e) => onValueChange(e)} name='vehicleId' value={vehicleId} id="my-input" aria-describedby="my-helper-text" />
             </FormControl>
             <FormControl>
-                <InputLabel htmlFor="my-input">Date</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name='number' value={type} id="my-input" aria-describedby="my-helper-text" />
+                <InputLabel htmlFor="my-input">Date & Time</InputLabel>
+                <Input onChange={(e) => onValueChange(e)} name='dateTime' value={dateTime} id="my-input" aria-describedby="my-helper-text" />
             </FormControl>
             <FormControl>
-                <InputLabel htmlFor="my-input">Time</InputLabel>
+                <InputLabel htmlFor="my-input">Driver Name</InputLabel>
                 <Input onChange={(e) => onValueChange(e)} name='driverName' value={driverName} id="my-input" aria-describedby="my-helper-text" />
             </FormControl>
             <FormControl>
-                <Button variant="contained" color="primary" onClick={() => editUserDetails()}>Response</Button>
+                <InputLabel htmlFor="my-input">Pickup Location</InputLabel>
+                <Input onChange={(e) => onValueChange(e)} name='location' value={location} id="my-input" aria-describedby="my-helper-text" />
+            </FormControl>
+            <FormControl>
+                <Button variant="contained" color="primary" onClick={() => editUserDetails()}>Edit</Button>
             </FormControl>
         </Container>
     )

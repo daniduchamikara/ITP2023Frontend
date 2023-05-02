@@ -7,12 +7,12 @@ import Controls from "../../Component/controls/Controls";
 import { useForm, Form } from '../useForm';
 import { useEffect } from 'react';
 const initialValue = {
-    name: "",
-    type: '',
-    number: '',
-    status: 'AVAILABLE',
-    driver: "",
-    driverName: ""
+    customerName: "",
+    vehicleId: '',
+    dateTime: '',
+    driverName: '',
+    location: '',
+    driverId: ''
 }
 const initialValueErr = {
     date: false,
@@ -198,9 +198,8 @@ const AddSchedule = () => {
                 <Grid container>
                     <Grid item xs={12}>
                         <Controls.Input
-                            name="name"
-                            label="Name"
-                            value={values.name}
+                            name="customerName"
+                            label="Customer Name"
                             onChange={handleInputChange}
                             error={errors.name}
                             type="name"
@@ -208,38 +207,26 @@ const AddSchedule = () => {
                         
                        
                         <Controls.Input
-                            name="number"
+                            name="vehicleId"
                             label="Vehicle Reg Plate Number"
-                            value={values.number}
                             onChange={handleInputChange}
                             error={errors.number}
                         />
-                        {/* <Controls.Input
-                            name="status"
-                            label="status"
-                            value={values.status}
-                            onChange={handleInputChange}
-                            error={errors.status}
-                        /> */}
-
-                        {/* <Controls.Input
-                            name="driverName"
-                            label="driverName"
-                            value={values.driverName}
-                            onChange={handleInputChange}
-                            error={errors.driverName}
-                        /> */}
                         <Controls.Input
-                            name="type"
-                            label="Date"
-                            value={values.type}
+                            name="dateTime"
+                            label="Date & Time"
                             onChange={handleInputChange}
                             error={errors.number}
                         />
                         <Controls.Input
                             name="driverName"
-                            label="Time"
-                            value={values.driverName}
+                            label="Driver Name"
+                            onChange={handleInputChange}
+                            error={errors.number}
+                        />
+                        <Controls.Input
+                            name="location"
+                            label="Pickup Location"
                             onChange={handleInputChange}
                             error={errors.number}
                         />
