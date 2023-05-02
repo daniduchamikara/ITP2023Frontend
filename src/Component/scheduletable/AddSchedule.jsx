@@ -209,7 +209,7 @@ const AddSchedule = () => {
                        
                         <Controls.Input
                             name="number"
-                            label="number"
+                            label="Vehicle Reg Plate Number"
                             value={values.number}
                             onChange={handleInputChange}
                             error={errors.number}
@@ -229,22 +229,28 @@ const AddSchedule = () => {
                             onChange={handleInputChange}
                             error={errors.driverName}
                         /> */}
-                        <Controls.Select
+                        <Controls.Input
                             name="type"
-                            label="Type"
+                            label="Date"
                             value={values.type}
                             onChange={handleInputChange}
-                            options={VType}
-                            error={errors.type}
+                            error={errors.number}
                         />
-                        {DriverOpt && <Controls.Select
+                        <Controls.Input
                             name="driverName"
-                            label="Driver Name"
+                            label="Time"
                             value={values.driverName}
                             onChange={handleInputChange}
-                            options={dd}
-                            error={errors.driverName}
-                        />}
+                            error={errors.number}
+                        />
+                        {/*{DriverOpt && <Controls.Select*/}
+                        {/*    name="driverName"*/}
+                        {/*    label="Driver Name"*/}
+                        {/*    value={values.driverName}*/}
+                        {/*    onChange={handleInputChange}*/}
+                        {/*    options={dd}*/}
+                        {/*    error={errors.driverName}*/}
+                        {/*/>}*/}
                     </Grid >
                 </Grid >
 

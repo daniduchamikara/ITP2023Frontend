@@ -56,23 +56,19 @@ const EditVehicle = () => {
         <Container injectFirst>
             <Typography variant="h4">Edit Information</Typography>
             <FormControl>
-                <InputLabel htmlFor="my-input">Name</InputLabel>
+                <InputLabel htmlFor="my-input">Customer Name</InputLabel>
                 <Input onChange={(e) => onValueChange(e)} name='name' value={name} id="my-input" aria-describedby="my-helper-text" />
             </FormControl>
             <FormControl>
-                <InputLabel htmlFor="my-input">Type</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name='type' value={type} id="my-input" aria-describedby="my-helper-text" />
+                <InputLabel htmlFor="my-input">Vehicle Reg Plate Number</InputLabel>
+                <Input onChange={(e) => onValueChange(e)} name='type' value={number} id="my-input" aria-describedby="my-helper-text" />
             </FormControl>
             <FormControl>
-                <InputLabel htmlFor="my-input">Number</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name='number' value={number} id="my-input" aria-describedby="my-helper-text" />
+                <InputLabel htmlFor="my-input">Date</InputLabel>
+                <Input onChange={(e) => onValueChange(e)} name='number' value={type} id="my-input" aria-describedby="my-helper-text" />
             </FormControl>
             <FormControl>
-                <InputLabel htmlFor="my-input">Status</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name='status' value={status} id="my-input" aria-describedby="my-helper-text" />
-            </FormControl>
-            <FormControl>
-                <InputLabel htmlFor="my-input">Driver Name</InputLabel>
+                <InputLabel htmlFor="my-input">Time</InputLabel>
                 <Input onChange={(e) => onValueChange(e)} name='driverName' value={driverName} id="my-input" aria-describedby="my-helper-text" />
             </FormControl>
             <FormControl>
