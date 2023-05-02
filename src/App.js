@@ -21,6 +21,7 @@ import UserComplain from "./Component/userComplains/UserComplain";
 import List from "./Component/list/List";
 import Home from "./Component/home/Home";
 import Vehicle from "./Component/vehicle/Vehicle";
+import Schedule from "./Component/schedule/Schedule";
 import Single from "./Component/employeesingle/Single";
 import New from "./Component/new/New";
 import Usercomplain from "./Component/usercomplain/Usercomplain";
@@ -28,10 +29,12 @@ import EmployeeLeaves from "./Component/employeeleave/EmployeeLeave";
 import EditUserComplainData from "./Component/userComplainData/EditUserComplainData";
 import EditEmployeeData from "./Component/datatable/EditDatatable";
 import Addvehicle from "./Component/vehicletable/AddVehicle";
+import Addschedule from "./Component/scheduletable/AddSchedule";
 import EmployeeHome from "./Component/employeehome/EmployeeHome";
 import UserHome from "./Component/userhome/UserHome";
 import EmployeeProfile from "./Component/employeeprofile/EmployeeProfile";
 import EditVehicle from "./Component/vehicletable/editVehicle";
+import EditSchedule from "./Component/scheduletable/editSchedule";
 import RequestingLeave from "./Component/Employee/main";
 import OllLeave from "./Component/EmployeeLeaveMain/List";
 import UserComplainMain from "./Component/usercomplainMain/Usercomplain";
@@ -127,6 +130,21 @@ function App() {
     {
       path: ":vehicleId",
       component: <Single />,
+      exact: true,
+    },
+    {
+      path: "/schedule",
+      component: <Schedule />,
+      exact: true,
+    },
+    {
+      path: "/schedule/add",
+      component: <Addschedule />,
+      exact: true,
+    },
+    {
+      path: "/schedule/edit/:id",
+      component: <EditSchedule />,
       exact: true,
     },
     {
