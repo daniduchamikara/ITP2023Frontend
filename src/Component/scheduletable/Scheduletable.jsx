@@ -60,8 +60,8 @@ const AllUsers = () => {
     <div>
       <br />
       <br />
-      {/* <Grid container >
-       
+      { <Grid container >
+
         <Grid item xs={6}>
         </Grid>
         <Grid item xs={5}>
@@ -77,7 +77,6 @@ const AllUsers = () => {
               color: '#000 !important',
               padding: '14px 20px',
               margin: '8px 0',
-              border: 'none',
               borderRadius: '4px',
               cursor: 'pointer',
               border: "1px soild red"
@@ -88,7 +87,7 @@ const AllUsers = () => {
 
         </Grid>
 
-      </Grid> */}
+      </Grid> }
  <Grid item xs={6}>
         </Grid>
         <Grid item xs={6}>
